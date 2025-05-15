@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useTheme } from '../context/ThemeContext';
-import { Paperclip, Send } from 'lucide-react';
+import { AtSign, Paperclip, Send } from 'lucide-react';
 
 const Contact = () => {
   const { themeColors } = useTheme();
@@ -9,7 +9,7 @@ const Contact = () => {
     fullName: '',
     email: '',
     phone: '',
-    subject: 'Subject 1',
+    subject: 'Hiring',
     budget: '',
     message: ''
   });
@@ -40,7 +40,7 @@ const Contact = () => {
         fullName: '',
         email: '',
         phone: '',
-        subject: 'Subject 1',
+        subject: 'Hiring',
         budget: '',
         message: ''
       });
@@ -52,13 +52,13 @@ const Contact = () => {
     <section id="contact" className="py-20">
       <div className="max-w-3xl">
         <div className="mb-12">
-          <h4 className={`flex items-center ${themeColors.text} font-medium mb-4`}>
-            <i className="las la-envelope mr-2"></i> Contact
+          <h4 className={`flex items-center ${themeColors.text} font-medium text-sm mb-4 animate-fadeIn border rounded-full w-fit px-2 py-0.5`}>
+            <AtSign className="w-4 mr-2" /> Contact
           </h4>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Let's Work <span className={themeColors.text}>Together!</span>
           </h2>
-          <h3 className="text-2xl mb-6">hello@drake.design</h3>
+          <h3 className="text-2xl mb-6">gbbeemal@gmail.com</h3>
           <p className="text-neutral-400">* Marked fields are required to fill.</p>
         </div>
 
