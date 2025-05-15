@@ -6,7 +6,7 @@ const About = () => {
 
   return (
     <section id="about" className="py-20">
-      <div className="max-w-3xl">
+      <div className="max-w-4xl">
         <div className="mb-6">
           <h4 className={`flex items-center ${themeColors.text} font-medium text-sm mb-4 animate-fadeIn border rounded-full w-fit px-2 py-0.5`}>
             <User className="w-4 mr-2" /> About

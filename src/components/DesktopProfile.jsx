@@ -7,7 +7,7 @@ const DesktopProfile = ({ themeColors }) => {
                 <div className="">
                     <div className="flex items-center justify-between text-right mb-8">
                         <img src="logo.png" alt="Logo" className="h-10" />
-                        <span className="text-sm">Full stack <br /> Web developer</span>
+                        <span className="text-sm">Full stack <br /> Software developer</span>
                     </div>
 
                     <img src="profile.jpg" alt="Profile" className="w-full h-78 object-cover rounded-lg mb-6" />

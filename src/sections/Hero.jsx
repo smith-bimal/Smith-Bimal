@@ -6,13 +6,13 @@ const Hero = () => {
 
   return (
     <section id="home" className="min-h-screen flex items-center py-20">
-      <div className="max-w-3xl">
+      <div className="max-w-4xl">
         <div className="mb-6">
           <h4 className={`flex items-center ${themeColors.text} font-medium text-sm mb-4 animate-fadeIn border rounded-full w-fit px-2 py-0.5`}>
             <House className="w-4 mr-2" /> Introduce
           </h4>
           <h1 className="text-6xl md:text-7xl mb-6 animate-fadeIn">
-            Say Hi from <span className={themeColors.text}>Smith</span>, Backend Developer
+            Say Hi from <span className={themeColors.text}>Smith</span>,<br /> Full-stack Software Developer
           </h1>
         </div>
 
