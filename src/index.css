@@ -1,10 +1,10 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
-*{
-    scroll-behavior: smooth;
+* {
+  scroll-behavior: smooth;
 }
 
-.setting-spin{
-    animation: spin 3s linear infinite;
+.setting-spin {
+  animation: spin 3s linear infinite;
 }

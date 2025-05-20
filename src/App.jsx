@@ -14,12 +14,15 @@ import { useTheme } from './context/ThemeContext';
 import DesktopProfile from './components/DesktopProfile';
 import { Settings, X } from 'lucide-react';
 import ThemeConfigPanel from './components/ThemeConfigPanel';
+import Loader from './components/Loader';
 
 function App() {
   const { themeColors, setCurrentTheme } = useTheme();
   const [activeSection, setActiveSection] = useState('home');
   const [menuOpen, setMenuOpen] = useState(false);
   const [configOpen, setConfigOpen] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [showLoader, setShowLoader] = useState(true);
 
   const handleScroll = () => {
     const sections = document.querySelectorAll('section[id]');
@@ -50,8 +53,22 @@ function App() {
 
   }, [])
 
+  useEffect(() => {
+    const timeout = setTimeout(() => setLoading(false), 1500);
+    return () => clearTimeout(timeout);
+  }, []);
+
+  useEffect(() => {
+    if (!loading) {
+      // trigger fade out
+      const fadeTimeout = setTimeout(() => setShowLoader(false), 500); // match Loader fade duration
+      return () => clearTimeout(fadeTimeout);
+    }
+  }, [loading]);
+
   return (
     <div className="bg-neutral-900 text-white relative">
+      {showLoader && <Loader onFadeOut={!loading ? () => setShowLoader(false) : undefined} />}
       {/* Background video - keeping as is per request */}
       <video className="fixed top-0 left-0 min-w-full min-h-full object-cover z-0 opacity-30" muted autoPlay loop>
         <source src="video4.mp4" type="video/mp4" />
