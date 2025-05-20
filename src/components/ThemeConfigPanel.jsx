@@ -9,6 +9,7 @@ const themeColors = [
     { name: "blue", class: "bg-blue-600", value: "blue" },
     { name: "red", class: "bg-red-500", value: "red" },
     { name: "pink", class: "bg-pink-500", value: "pink" },
+    { name: "violet", class: "bg-violet-500", value: "violet" },
 ];
 
 const threeDShapes = [

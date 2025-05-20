@@ -57,6 +57,13 @@ const themeOptions = {
         border: 'border-pink-500',
         hover: 'hover:bg-pink-500 hover:text-pink-500 font-semibold',
         focus:"focus:border-pink-500"
+    },
+    violet: {
+        text: 'text-violet-500',
+        bg: 'bg-violet-500',
+        border: 'border-violet-500',
+        hover: 'hover:bg-violet-500 hover:text-violet-500 font-semibold',
+        focus:"focus:border-violet-500"
     }
 };
 
