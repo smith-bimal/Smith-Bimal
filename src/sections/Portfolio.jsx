@@ -44,7 +44,7 @@ const Portfolio = () => {
   ];
 
   return (
-    <section id="portfolio" className="lg:py-20 py-16">
+    <section id="portfolio" className="py-20">
       <div>
         <div className="mb-12">
           <h4 className={`flex items-center ${themeColors.text} font-medium text-sm mb-4 animate-fadeIn border rounded-full w-fit px-2 py-0.5`}>

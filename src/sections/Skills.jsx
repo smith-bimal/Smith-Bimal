@@ -27,7 +27,7 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="lg:py-20 py-16">
+    <section id="skills" className="py-20">
       <div className="max-w-4xl">
         <div className="mb-12">
           <h4 className={`flex items-center ${themeColors.text} font-medium text-sm mb-4 animate-fadeIn border rounded-full w-fit px-2 py-0.5`}>
