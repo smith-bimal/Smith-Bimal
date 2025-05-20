@@ -16,7 +16,7 @@ const Hero = () => {
           </h1>
         </div>
 
-        <p className="text-gray-300 text-xl mb-12 animate-fadeIn">
+        <p className="text-neutral-300 text-xl mb-12 animate-fadeIn">
           I design and code beautifully simple things with strong technical skills. Specializing in building complex, scalable projects while combining technical expertise with development proficiency to deliver robust solutions.
         </p>
 
@@ -24,12 +24,12 @@ const Hero = () => {
           <div className="flex flex-wrap md:flex-nowrap gap-10 animate-fadeIn">
             <div>
               <h2 className="text-4xl font-bold mb-2">10+</h2>
-              <p className="text-gray-400">Projects<br />Completed</p>
+              <p className="text-neutral-400">Projects<br />Completed</p>
             </div>
 
             <div>
               <h2 className="text-4xl font-bold mb-2">1.5+</h2>
-              <p className="text-gray-400">Years of professional<br />technical experience</p>
+              <p className="text-neutral-400">Years of professional<br />technical experience</p>
             </div>
           </div>
 
