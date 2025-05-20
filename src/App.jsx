@@ -88,7 +88,7 @@ function App() {
         </div>
 
 
-        <div className="container mx-auto px-4 md:p-10 relative">w
+        <div className="container mx-auto px-4 md:p-10 relative">
           <Navigation activeSection={activeSection} />
           <DesktopProfile themeColors={themeColors} />
           <Hero />
