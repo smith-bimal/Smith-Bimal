@@ -17,7 +17,7 @@ const About = () => {
           </h2>
         </div>
 
-        <p className="text-gray-300 text-lg">
+        <p className="text-neutral-300 text-lg">
           Since beginning my journey in tech, I've explored everything from backend engineering to building complex web applications and collaborating with talented people to deliver robust digital solutions. With a strong foundation in Computer Science and hands-on experience in technical support and backend development, I'm quietly confident, naturally curious, and always working on improving my skills one project at a time.
           <br /><br />
           My academic background includes a B.Tech in Computer Science and a MCA in Computer Science & Information Technology, which have equipped me with a solid understanding of algorithms, data structures, and scalable system design. I am proficient in technologies such as React, Node.js, Express.js, Python, Flask, SQL, MongoDB, and RESTful APIs, and have delivered projects ranging from AI-powered financial platforms to end-to-end travel and healthcare management systems.

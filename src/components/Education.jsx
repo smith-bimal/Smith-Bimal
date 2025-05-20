@@ -48,7 +48,7 @@ const Education = () => {
                         </span>
                         <div>
                             <h3 className="text-xl font-bold">{edu.title}</h3>
-                            <p className="text-gray-400">{edu.institution}</p>
+                            <p className="text-neutral-400">{edu.institution}</p>
                         </div>
                     </div>
                 ))}

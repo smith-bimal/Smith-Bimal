@@ -49,7 +49,7 @@ const Skills = () => {
               <div className="relative w-18 h-18 flex items-center justify-center">
                 <div
                   className={`w-full h-full rounded-full flex items-center justify-center border-2 transition-colors duration-200
-                    ${hovered === index ? themeColors.text : "border-gray-700"}`}
+                    ${hovered === index ? themeColors.text : "border-neutral-700"}`}
                 >
                   <div
                     className="tooltip tooltip-top"

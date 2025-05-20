@@ -46,7 +46,7 @@ const Experience = () => {
                         {exp.roles.map((role, roleIndex) => (
                             <div key={roleIndex} className={roleIndex !== exp.roles.length - 1 ? 'mb-6' : ''}>
                                 <h3 className="text-xl font-bold">{role.title}</h3>
-                                <p className="text-gray-400">{role.company}</p>
+                                <p className="text-neutral-400">{role.company}</p>
                             </div>
                         ))}
                     </div>
