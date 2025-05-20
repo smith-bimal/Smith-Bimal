@@ -83,6 +83,7 @@ export const ThemeProvider = ({ children }) => {
     // Value provided by the context
     const value = {
         currentTheme,
+        setCurrentTheme,
         themeColors,
         changeTheme,
         allThemes: Object.keys(themeOptions)

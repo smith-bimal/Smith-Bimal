@@ -4,3 +4,7 @@
 *{
     scroll-behavior: smooth;
 }
+
+.setting-spin{
+    animation: spin 3s linear infinite;
+}

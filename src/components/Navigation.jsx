@@ -14,7 +14,7 @@ const Navigation = ({ activeSection }) => {
   ];
 
   return (
-    <div className="fixed right-16 top-1/2 -translate-y-1/2 z-10 hidden md:block border border-neutral-700 p-5 rounded-full bg-[#6161612d] bg-opacity-75 backdrop-blur-sm">
+    <div className="fixed 2xl:right-18 xl:right-12 lg:right-8 right-6 top-1/2 -translate-y-1/2 z-20 hidden md:block border border-neutral-700 p-5 rounded-full bg-[#6161612d] bg-opacity-75 backdrop-blur-sm">
       <ul className="flex flex-col space-y-4">
         {navItems.map(item => (
           <li key={item.id}>

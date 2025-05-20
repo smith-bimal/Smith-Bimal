@@ -44,7 +44,7 @@ const Portfolio = () => {
   ];
 
   return (
-    <section id="portfolio" className="py-20">
+    <section id="portfolio" className="lg:py-20 py-16">
       <div>
         <div className="mb-12">
           <h4 className={`flex items-center ${themeColors.text} font-medium text-sm mb-4 animate-fadeIn border rounded-full w-fit px-2 py-0.5`}>
@@ -59,7 +59,8 @@ const Portfolio = () => {
           {projects.map(project => (
             <div key={project.id} className={`${project.fullWidth ? 'md:col-span-2' : 'lg:col-span-2 xl:col-span-1'}`}>
               <div className="group overflow-hidden rounded-xl relative">
-                <a href={project.link} target="_blank" rel="noopener noreferrer" className="block overflow-hidden">
+                {/* Outer anchor removed, only image is clickable */}
+                <div className="block overflow-hidden relative cursor-pointer" onClick={() => window.open(project.link, "_blank")}>
                   <img
                     src={project.image}
                     alt={project.title}
@@ -78,16 +79,21 @@ const Portfolio = () => {
                         ))}
                       </div>
                       <h3 className="text-xl font-bold">
-                        <a href={project.link} target="_blank" rel="noopener noreferrer" className={`hover:${themeColors.text} transition-colors`}>{project.title}</a>
+                        <span className={`group-hover:${themeColors.text} transition-colors`}>{project.title}</span>
                       </h3>
                       {project.repo && (
-                        <a href={project.repo} target="_blank" rel="noopener noreferrer" className={`text-xs ${themeColors.text} underline mt-2 inline-block`}>
+                        <a
+                          href={project.repo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={`text-xs underline mt-2 inline-block text-neutral-400 hover:${themeColors.text} transition-colors`}
+                        >
                           View Code
                         </a>
                       )}
                     </div>
                   </div>
-                </a>
+                </div>
               </div>
             </div>
           ))}

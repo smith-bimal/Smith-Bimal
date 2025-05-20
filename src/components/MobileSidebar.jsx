@@ -5,7 +5,7 @@ const MobileSidebar = ({ menuOpen, setMenuOpen, activeSection }) => {
     const { themeColors } = useTheme();
 
     return (
-        <div className={`fixed top-0 right-0 w-80 h-full bg-neutral-900 z-20 transform transition-all duration-300 ease-in-out ${menuOpen ? 'translate-x-0' : 'translate-x-full opacity-0'} lg:hidden`}>
+        <div className={`fixed top-0 right-0 w-80 h-full bg-neutral-900 z-20 transform transition-all duration-300 ease-in-out ${menuOpen ? 'translate-x-0' : 'translate-x-full opacity-0'}`}>
             <div className="p-12 h-full overflow-y-auto text-neutral-400">
                 <h3 className="text-lg font-medium mb-4">Menu</h3>
 

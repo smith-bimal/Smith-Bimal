@@ -2,15 +2,15 @@ import { Github, Instagram, Linkedin, Mail, Youtube } from "lucide-react";
 
 const DesktopProfile = ({ themeColors }) => {
     return (
-        <div className="relative top-8 left-1/2 -translate-x-1/2 lg:fixed lg:top-1/2 xl:left-20 lg:left-12 lg:-translate-y-1/2 lg:translate-x-0 w-fit max-w-[25rem] rounded-3xl bg-transparent backdrop-blur-sm border border-neutral-700 z-10">
-            <div className="flex flex-col h-full p-8">
+        <div className="relative top-8 lg:fixed left-1/2 -translate-x-1/2 lg:top-1/2 2xl:left-18 xl:left-12 lg:left-8 lg:-translate-y-1/2 lg:translate-x-0 lg:w-fit lg:max-w-[25rem] rounded-3xl bg-transparent backdrop-blur-sm border border-neutral-700 z-10">
+            <div className="flex flex-col h-full 2xl:p-12 xl:p-10 p-8">
                 <div className="">
                     <div className="flex items-center justify-between text-right mb-8">
                         <img src="logo.png" alt="Logo" className="h-10" />
                         <span className="text-sm">Full stack <br /> Software developer</span>
                     </div>
 
-                    <img src="profile.jpg" alt="Profile" className="w-full h-78 object-cover rounded-lg mb-6" />
+                    <img src="profile.jpg" alt="Profile" className="w-78 h-78 object-cover mx-auto rounded-lg mb-6" />
 
                     <div className="space-y-2 text-center">
                         <h3 className="text-xl">gbbeemal@gmail.com</h3>

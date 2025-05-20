@@ -12,12 +12,14 @@ import Contact from './sections/Contact';
 import SideBar from './components/SideBar';
 import { useTheme } from './context/ThemeContext';
 import DesktopProfile from './components/DesktopProfile';
+import { Settings, X } from 'lucide-react';
+import ThemeConfigPanel from './components/ThemeConfigPanel';
 
 function App() {
-
-  const { themeColors } = useTheme();
+  const { themeColors, setCurrentTheme } = useTheme();
   const [activeSection, setActiveSection] = useState('home');
   const [menuOpen, setMenuOpen] = useState(false);
+  const [configOpen, setConfigOpen] = useState(false);
 
   const handleScroll = () => {
     const sections = document.querySelectorAll('section[id]');
@@ -38,6 +40,16 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    const storedTheme = localStorage.getItem('theme');
+    if (storedTheme) {
+      setCurrentTheme(storedTheme);
+    } else {
+      setCurrentTheme('green');
+    }
+
+  }, [])
+
   return (
     <div className="bg-neutral-900 text-white relative">
       {/* Background video - keeping as is per request */}
@@ -47,7 +59,7 @@ function App() {
 
       {/* Mobile menu button */}
       <button
-        className={`md:hidden fixed top-10 right-10 z-50 flex flex-col justify-center items-center w-12 h-12 ${menuOpen ? 'active' : ''}`}
+        className={`md:hidden fixed top-6 right-2 z-50 flex flex-col justify-center items-center w-12 h-12 ${menuOpen ? 'active' : ''}`}
         onClick={() => setMenuOpen(!menuOpen)}
       >
         <span className={`block h-0.5 bg-white transition-all ${menuOpen ? 'rotate-45 translate-y-2 mb-1 w-5' : 'mb-1 w-4'}`}></span>
@@ -56,13 +68,26 @@ function App() {
       </button>
 
       {/* Sidebar */}
-      <SideBar menuOpen={menuOpen} setMenuOpen={setMenuOpen} activeSection={activeSection} />
+      <SideBar menuOpen={menuOpen} setMenuOpen={setMenuOpen} activeSection={activeSection} configOpen={configOpen} setConfigOpen={setConfigOpen} />
 
-      {/* Main Navigation */}
-
+      {/* Theme Configuration Panel */}
+      <ThemeConfigPanel open={configOpen} setConfigOpen={setConfigOpen} />
 
       {/* Main Content */}
       <main className="lg:ml-[26rem] lg:mr-30 xl:ml-[28rem] 2xl:ml-[35rem] 2xl:mr-50 relative">
+        <div className="fixed top-8 -left-1 py-2 px-3 border-2 border-l-0 rounded-r-2xl border-neutral-700 z-50 cursor-pointer bg-neutral-900">
+          {configOpen ?
+            <X className="text-neutral-400"
+              onClick={() => setConfigOpen(false)}
+            />
+            :
+            <Settings
+              className={`setting-spin text-neutral-400`}
+              onClick={() => setConfigOpen(true)}
+            />}
+        </div>
+
+
         <div className="container mx-auto px-4 md:p-10 relative">
           <Navigation activeSection={activeSection} />
           <DesktopProfile themeColors={themeColors} />
