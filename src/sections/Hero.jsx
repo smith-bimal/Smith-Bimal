@@ -12,7 +12,7 @@ const Hero = () => {
             <House className="w-4 mr-2" /> Introduce
           </h4>
           <h1 className="text-6xl md:text-7xl mb-6 animate-fadeIn">
-            Say Hi from <span className={themeColors.text}>Smith</span>,<br /> Full-stack Software Developer
+            Hey, there! I'm <span className={themeColors.text}>Smith</span>,<br /> Full-stack Software Developer
           </h1>
         </div>
 
